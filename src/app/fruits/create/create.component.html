@@ -15,9 +15,13 @@
         <input type="number" name="quantity" [(ngModel)] = "fruitForm.quantity" class="form-control" id="txtQuantity" />
       </div>
 
-      <div class="mb-3">
+      <div class="mb-3" >
         <label for="txtIdCategory" class="form-label">IdCategory</label>
-        <input type="number" name="idcategory" [(ngModel)] = "fruitForm.category.id" class="form-control" id="txtIdCategory" />
+        <select type="number" name="idcategory" [(ngModel)] = "fruitForm.category.id" class="form-control" id="txtIdCategory" >
+             
+          <option *ngFor="let item of allcategories" value={{item.id}}> {{item.name}} </option>
+          </select>
+        <!--<input type="number" name="idcategory" [(ngModel)] = "fruitForm.category.id" class="form-control" id="txtIdCategory" />-->
       </div>      
 
 
