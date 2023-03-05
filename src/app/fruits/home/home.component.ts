@@ -26,6 +26,7 @@ ngOnInit(): void {
   get()
   {
     this.fruitService.get().subscribe((data)=>{this.allFruits=data;
+     // console.log(data);
     });
   }
   openDeleteModal(id: number) {
